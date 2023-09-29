@@ -1,0 +1,27 @@
+# Node.js / Express
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+
+# IDE/Editor files
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Mac-specific files
+.DS_Store
+
+# Express.js generated files
+public/
+
+# Dependency directories
+bower_components/
+jspm_packages/
