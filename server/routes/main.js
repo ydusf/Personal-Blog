@@ -68,13 +68,15 @@ router.post('/create-post', async (req, res) => {
 })
 
 // GET - EDIT POST - :id
-router.put('/edit-post/:id', async (req, res) => {
+router.get('/edit-post/:id', async (req, res) => {
   try {
+    const locals = LOCALS;
+
     let slug = req.params.id
 
+    const post = await Post.findOne({ _id: slug});
 
-
-    res.redirect('/edit-post');
+    res.render('edit-post', { locals, post });
   } catch (err) {
     console.log(err);
   }
