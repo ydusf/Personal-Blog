@@ -9,10 +9,12 @@
           <span class="post__heading"><%= post.title %></span>
           <span class="post__date"><%= post.updatedAt.toDateString()%></span>
         </a>
-        <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
-          <input type="submit" value="Delete" class="delete__post__btn">
-        </form>
-        <a href="/edit-post/<%= post._id %>" class="edit__post__btn">EDIT</a>
+        <div class="man__post__btn">
+          <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" class="delete__post__btn">
+          </form>
+          <a href="/edit-post/<%= post._id %>" class="edit__post__btn">Edit</a>
+        </div>
       </li>
     <% }) %>
   </ul>
