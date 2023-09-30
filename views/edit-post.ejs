@@ -1,9 +1,11 @@
-<form action="/edit-post/<%= post._id %>?_method=PUT" method="POST">
-  <label for="title"><b>Title</b></label>
-  <input type="text" placeholder="Post Title" name="title" value="<%= post.title %>">
-  
-  <label for="body"><b>Content</b></label>
-  <textarea name="body" cols="50" rows="10"><%= post.body %></textarea>
+<div class="post__create__box">
+  <form action="/edit-post/<%= post._id %>?_method=PUT" method="POST">
+    <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Post Title" name="title" value="<%= post.title %>">
+    
+    <label for="body"><b>Content</b></label>
+    <textarea name="body" cols="50" rows="10"><%= post.body %></textarea>
 
-  <input type="submit" value="Update" class="edit__post__btn">
-</form>
+    <input type="submit" value="Update" class="edit__post__btn">
+  </form>
+</div>
