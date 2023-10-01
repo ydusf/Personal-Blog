@@ -179,5 +179,10 @@ footer{
   padding: 30px;
 }
 
+/* ABOUT PAGE */
+.about__div, .contact__div{
+  padding: 30px;
+}
+
 
 
