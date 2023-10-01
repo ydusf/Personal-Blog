@@ -19,9 +19,6 @@ yarn.lock
 # Mac-specific files
 .DS_Store
 
-# Express.js generated files
-public/
-
 # Dependency directories
 bower_components/
 jspm_packages/
