@@ -59,6 +59,7 @@ app.set('view engine', 'ejs'); // Set EJS as the view engine
 
 // Routes Configuration
 app.use('/', require('./server/routes/main')); // Use main routes
+app.use('/', require('./server/routes/admin')); // Use admin routes
 
 // Start the server and listen on the specified port
 app.listen(PORT, () => {
