@@ -1,16 +1,18 @@
-<h3>Sign In</h3>
+<div class="admin__register__box">
+  <h3>Sign In</h3>
+  <br>
+  <form action="/admin" method="POST">
 
-<form action="/admin" method="POST">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="username">
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter username" name="username">
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter password" name="password">
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter password" name="password">
+      <input type="submit" value="Login" class="admin__register__btn btn">
 
-    <input type="submit" value="Login" class="admin__register__btn btn">
-
-</form>
+  </form>
+</div>
 
 <!-- <h3>Sign Up</h3>
 <form action="/register" method="POST">
