@@ -126,6 +126,8 @@ footer{
 .blog__post{
   padding: 30px;
   white-space: pre-line;
+  overflow-y: scroll;
+  max-height: 90vh;
 }
 
 .blog__post__title{
@@ -136,7 +138,7 @@ footer{
 
 .blog__post__body{
   padding: 0 20px;
-  font-size: var(--bs-font-size);
+  font-size: var(--md-font-size);
 }
 
 .add__post__btn{
