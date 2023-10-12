@@ -5,6 +5,7 @@ const Post = require('../models/Post');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { body, validationResult } = require('express-validator');
 
 // Initialise the constants for authentication
 const adminLayout = '../views/layouts/admin';
@@ -124,15 +125,23 @@ router.get('/create-post', authValidator, async (req, res) => {
 });
 
 // POST - CREATE-POST
-router.post('/create-post', authValidator, async (req, res) => {
-  try {
-    await Post.create({ title: req.body.title, body: req.body.body })
+router.post('/create-post', authValidator, [
+  body('title').notEmpty(),
+  body('body').notEmpty(),
+], async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.redirect('admin/create-post');
+  }
 
+  try {
+    await Post.create({ title: req.body.title, body: req.body.body });
     res.redirect('/dashboard');
   } catch (err) {
-    console.log(err);
+    console.error(err);
+    res.status(500).json({ message: 'Could not create the post.' });
   }
-})
+});
 
 // GET - EDIT POST - :id
 router.get('/edit-post/:id', authValidator, async (req, res) => {

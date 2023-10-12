@@ -10,14 +10,26 @@ const LOCALS = {
 // GET - HOME
 router.get('', async (req, res) => {
   try {
-    const locals = {
-      title: "Personal Blog",
-      description: "Blog created using NodeJS, Express & MongoDB"
-    }
+    const locals = LOCALS;
 
-    const data = await Post.find();
+    let limit = 10;
+    let page = req.query.page || 1;
+
+    const data = await Post.aggregate([ { $sort: { updatedAt: -1 } } ])
+    .skip(limit * page - limit)
+    .limit(limit)
+    .exec();
+
+    const count = await Post.count();
+    const nextPage = parseInt(page) + 1;
+    const hasNextPage = nextPage <= Math.ceil(count / limit);
       
-    res.render('index', { locals, data });
+    res.render('index', { 
+      locals, 
+      data,
+      current: page,
+      nextPage: hasNextPage ? nextPage : null 
+    });
   } catch (err) {
     console.log(err);
   }

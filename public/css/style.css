@@ -138,7 +138,7 @@ footer{
 
 .blog__post__body{
   padding: 0 20px;
-  font-size: var(--md-font-size);
+  font-size: var(--bs-font-size);
 }
 
 .add__post__btn{

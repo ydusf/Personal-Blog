@@ -9,4 +9,8 @@
       </li>
     <% }) %>
   </ul>
+
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination__btn">&lt; View Older Posts</a>
+  <% } %>
 </section>
