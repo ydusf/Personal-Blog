@@ -1,9 +1,9 @@
-@font-face{
+@font-face {
   font-family: myFont;
-  src: url('Mooli-Regular.ttf');
+  src: url("Mooli-Regular.ttf");
 }
-  
-:root{
+
+:root {
   --p-colour: #333333;
   --s-colour: #555555;
   --a-colour: #007acc;
@@ -13,15 +13,15 @@
   --lg-font-size: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
   --xl-large-font-size: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   --border-radius: 8px;
-  --box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  --box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: myFont;
-  color: white;
+  color: rgb(212, 212, 212);
 }
 
 input[type="text"],
@@ -38,11 +38,13 @@ textarea {
   border-radius: var(--border-radius);
 }
 
-li, a, button{
+li,
+a,
+button {
   text-decoration: none;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -51,19 +53,19 @@ li, a, button{
 }
 
 /* FOOTER STYLING */
-footer{
+footer {
   text-align: center;
   margin-top: auto;
   margin-bottom: 20px;
 }
 
 /* HEADER STYLING */
-.header{
+.header {
   background-color: var(--p-colour);
   padding: 0 20px;
 }
 
-.header__nav{
+.header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,36 +73,36 @@ footer{
   padding: 0 20px;
 }
 
-.header__logo{
+.header__logo {
   cursor: pointer;
 }
 
-.header__nav ul{
+.header__nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.header__nav li{
+.header__nav li {
   display: inline-block;
   margin-right: 20px;
   padding: 0 15px;
 }
 
-.header__nav li:last-child{
+.header__nav li:last-child {
   margin-right: 0;
 }
 
-.header__nav a{
+.header__nav a {
   transition: all 0.3s ease;
 }
 
-.header__nav a:hover{
+.header__nav a:hover {
   color: var(--a-colour);
 }
 
 /* ALL POST STYLING */
-.post__links{
+.post__links {
   padding: 15px;
   margin: 0;
   display: flex;
@@ -108,7 +110,7 @@ footer{
   list-style-type: none;
 }
 
-.post__link{
+.post__link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -117,40 +119,40 @@ footer{
   padding: 0 0 0 30px;
 }
 
-.post__date{
+.post__date {
   display: inline-block;
   min-width: 200px;
 }
 
 /* SPECIFIC POST STYLING */
-.blog__post{
+.blog__post {
   padding: 30px;
   white-space: pre-line;
   overflow-y: scroll;
   max-height: 90vh;
 }
 
-.blog__post__title{
+.blog__post__title {
   font-size: var(--lg-font-size);
   font-weight: bold;
   text-align: center;
 }
 
-.blog__post__body{
+.blog__post__body {
   padding: 0 20px;
   font-size: var(--bs-font-size);
 }
 
-.add__post__btn{
+.add__post__btn {
   text-align: right;
   margin: 18px 40px 0 0;
 }
 
 /* BUTTON STYLING */
-.edit__post__btn, 
-.create__post__btn, 
+.edit__post__btn,
+.create__post__btn,
 .delete__post__btn,
-.admin__register__btn{
+.admin__register__btn {
   border: none;
   margin: 0 2px;
   cursor: pointer;
@@ -159,33 +161,33 @@ footer{
   font-size: var(--bs-font-size);
 }
 
-.delete__post__btn{
+.delete__post__btn {
   background-color: red;
 }
 
-.edit__post__btn, .admin__register__btn{
+.edit__post__btn,
+.admin__register__btn {
   background-color: var(--a-colour);
 }
 
-.create__post__btn{
+.create__post__btn {
   background-color: green;
 }
 
-.man__post__btn{
+.man__post__btn {
   display: flex;
   flex-direction: row;
   padding: 0 0 0 30px;
 }
 
 /* FORM STYLING */
-.post__create__box, .admin__register__box{
+.post__create__box,
+.admin__register__box {
   padding: 30px;
 }
 
 /* ABOUT PAGE */
-.about__div, .contact__div{
+.about__div,
+.contact__div {
   padding: 30px;
 }
-
-
-
